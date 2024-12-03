@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is my home page</title>
+</head>
+<body>
+    <h1>Home Page with Articles</h1>
+    {% for post in object_list %}
+        <ul>
+            <li><h2><a href="{% url 'post-details' post.pk %}">{{post.title}}</a></h2></li>
+            <li>{{post.author}}</li>
+            <li><p>{{post.description}}</p></li>
+        </ul>
+        {% endfor %}
+</body>
+</html>
+
+
+
+
